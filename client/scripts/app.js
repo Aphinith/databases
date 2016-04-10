@@ -3,8 +3,8 @@
 /////////////////////////////////////////////////////////////////////
 var app = {
 
-  server: 'https://api.parse.com/1/classes/chatterbox',
-  // server: 'http://localhost:3060',
+  // server: 'https://api.parse.com/1/classes/chatterbox',
+  server: 'http://localhost:3000/classes/messages',
 
   init: function() {
     console.log('running chatterbox');
@@ -36,6 +36,7 @@ var app = {
   },
 
   renderMessage: function(message) {
+    console.log(message);
     var $user = $("<div>",{class: 'user'}).text(message.username);
     var $text = $("<div>", {class:'text'}).text(message.text);
     var $message = $("<div>", {class: 'chat', 'data-id': message.objectId}).append($user, $text);

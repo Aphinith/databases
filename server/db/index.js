@@ -20,11 +20,6 @@ con.connect(function(err){
   console.log("Connection established");
 });
 
-con.end(function(err){
-  if (err) {
-    console.log('it is closed inside err');
-  }
-  console.log('it is closed');
-})
 
-module.exports.con = con;
+
+module.exports = con;
